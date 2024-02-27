@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+
+    <title>Historial de Tipo de Cambio USD a CLP</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Historial de Tipo de Cambio USD a CLP</h1>
+        <div class="chart-container">
+            <canvas id="myChart"></canvas>
+        </div>
+        <div class="date-selector">
+            <label for="start-date">Desde:</label>
+            <input type="date" id="start-date" value="2022-01-01">
+            <label for="end-date">Hasta:</label>
+            <input type="date" id="end-date" value="2022-02-01">
+            <button onclick="updateChart()">Actualizar Gráfico</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+    <script src="main.js" type="module"></script>
+
+
+
+</body>
+
+</html>
