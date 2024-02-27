@@ -3,40 +3,37 @@ document.addEventListener('DOMContentLoaded', function () {
 
     fetch(apiUrl)
         .then((response) => response.json())
-        .then((data) => displayCountries(data))
+        .then((data) => displayCountriesChart(data))
         .catch((error) => console.error('Error en obtener lista:', error));
 
-    function displayCountries(countries) {
-        const countriesListElement = document.getElementById('countries-list');
-        const searchInput = document.getElementById('search-input');
+    function displayCountriesChart(countries) {
+        const ctx = document.getElementById('myChart').getContext('2d');
 
-        const ul = document.createElement('ul');
+        // Extrae los datos necesarios para el gráfico, por ejemplo, nombres de países y poblaciones
+        const countryNames = countries.map(country => country.name.common);
+        const populations = countries.map(country => country.population);
 
-        countries.forEach((country) => {
-            const li = document.createElement('li');
-            li.textContent = country.name.common;
-            ul.appendChild(li);
-        });
-
-        countriesListElement.appendChild(ul);
-
-        // Agregar un evento de escucha al campo de búsqueda
-        searchInput.addEventListener('input', function () {
-            const searchTerm = searchInput.value.toLowerCase();
-            const filteredCountries = countries.filter(country =>
-                country.name.common.toLowerCase().includes(searchTerm)
-            );
-
-            // Limpiar la lista actual antes de mostrar la lista filtrada
-            ul.innerHTML = '';
-
-            // Mostrar la lista filtrada
-            filteredCountries.forEach((country) => {
-                const li = document.createElement('li');
-                li.textContent = country.name.common;
-                ul.appendChild(li);
-            });
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: countryNames,
+                datasets: [{
+                    label: 'Población',
+                    data: populations,
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
         });
     }
 });
+
 
