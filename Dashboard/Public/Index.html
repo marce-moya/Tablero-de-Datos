@@ -5,25 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css"> 
-    <title>API de países</title>
+    <title>Tablero de datos</title>
 </head>
 
 <body>
-    <h1>Información de Países</h1>
-    <label for="search-input">Buscar país:</label>
-    <input type="text" id="search-input" placeholder="Nombre de un país">
-    <div id="countries-list"></div>
-    <!-- <div class="city-input" type="text" placeholder="Ej. Santiago"></div> -->
-    <!-- <button class="search-btn">Buscar</button> -->
-    
-
-    <div>
+    <div id="chart-container">
         <canvas id="myChart"></canvas>
     </div>
-    <script src="Dashboard/src/index.js" type="module"></script>
+
+
+    <script src="src/index.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
-
+    
 </body>
 
 </html>
