@@ -3,4 +3,6 @@ El objetivo del proyecto es poner en práctica lo aprendido para conectarse a tr
 Esto se desarrolla en ambiente creado con Node.js
 Se aplican procesos asincronos en Javascript.
 https://github.com/marce-moya/Tablero-de-Datos.git
-Autor: Marcela Moya
+Autor: Marcela Moya![api](https://github.com/marce-moya/Tablero-de-Datos/assets/144967542/19af520a-03bd-4603-bafd-55adb8ea0d17)
+![api](https://github.com/marce-moya/Tablero-de-Datos/assets/144967542/7e5c0e04-3589-458e-a72e-5d3ab796c42f)
+
