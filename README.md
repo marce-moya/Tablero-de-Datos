@@ -6,3 +6,8 @@ https://github.com/marce-moya/Tablero-de-Datos.git
 Autor: Marcela Moya
 ![api](https://github.com/marce-moya/Tablero-de-Datos/assets/144967542/19af520a-03bd-4603-bafd-55adb8ea0d17)
 
+![image](https://github.com/marce-moya/Tablero-de-Datos/assets/144967542/cf9a9ad7-3904-4e16-b06c-ec03a1e458b5)
+
+
+
+
